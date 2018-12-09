@@ -39,6 +39,7 @@ def start_connection(host, port, num_conns):
 def service_connectino(key, mask):
     sock = key.fileobj
     data = key.data
+    #print('data: ', data)
     if mask & selectors.EVENT_READ:
         recv_data = sock.recv(1024)
         if recv_data:
